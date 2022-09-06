@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       
       <Search {...{ getPokemons }} />
-      {error? <h2>Please make sure you´re searching for a Pokemon</h2>:null}
+      {error? <h2>pokemon {pokemon} not found</h2>:null}
 
       {!cargando && pokemon ? <PokeCard nombre={pokemon.name} 
       sprites={pokemon.sprites.front_default} 
