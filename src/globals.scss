@@ -1,0 +1,11 @@
+$mainColor:#c0c0c0;
+$secundario:#FABB51;
+$letras:#1A374D;
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width:#{$width}){
+        @content
+    }
+}

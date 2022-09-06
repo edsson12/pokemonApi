@@ -25,6 +25,7 @@ function App() {
       sprites={pokemon.sprites.front_default} 
       abilities={pokemon.abilities}
       stats={pokemon.stats}
+      moves={pokemon.moves}
       /> : null}
     </div>
   );
