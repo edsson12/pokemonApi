@@ -1,87 +1,132 @@
 @import "../../globals.scss";
-.o-card{
-    display: flex;
+.o-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 25rem;
+  height: 30rem;
+  background: $mainColor;
+  border-radius: 1rem;
+
+  .o-imgcont {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 30%;
-    border: 1px solid red;
-    border-radius: 1rem;
+  }
+  .o-type-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-    .o-imgcont{
-        
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    p {
+      font-family: $font-secundary;
+      color: $mainColor;
+      background-color: #ffcb05;
+      padding: 0.5rem 3rem;
+      border-radius: 1rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .o-nombre {
+    h2 {
+      font-family: $font-primary;
+      color: $letras;
+      text-transform: uppercase;
+    }
+  }
+
+  .o-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .o-active {
+      width: 100%;
+      background-color: $secundario; /* Green */
+      border: none;
+
+      color: $mainColor;
+      padding: 8px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      font-family: $font-secundary;
+    }
+
+    .o-tab {
+      width: 100%;
+      background-color: #1d2c5e; /* Green */
+      border: none;
+
+      color: white;
+      padding: 8px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      font-family: $font-secundary;
+    }
+  }
+  .o-abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+    width: 100%;
     
+    p{
+        color: white;
+        font-family: $font-secundary;
     }
-    .o-type-container{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        
-        p{
-            font-family: $font-secundary;
-        }
-
+  }
+  .o-abilities-inactive {
+    display: none;
+  }
+  .o-moves {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+    width: 100%;
+    p{
+        color: white;
+        font-family: $font-secundary;
     }
-
-    .o-nombre{
-        h2{
-            font-family: $font-primary; 
-            text-transform: uppercase;
-        }
-    }
-
-    .o-tabs{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .o-active{
-            width: 135px;
-            text-align: center;
-            background: red;
-            border-bottom: 2px solid #c1c4c9;
-            padding: 13px 15px;
-          cursor: pointer;
-          -webkit-transition: all 0.2s ease;
-          -o-transition: all 0.2s ease;
-          transition: all 0.2s ease;
-          
-        }
-        
-       
-        
-        .o-tab{
-            width: 135px;
-            text-align: center;
-            background: #e9ecf1;            
-            padding: 13px 15px;
-          cursor: pointer;
-          -webkit-transition: all 0.2s ease;
-          -o-transition: all 0.2s ease;
-          transition: all 0.2s ease;
-          
-          
-          
-          
-        }
-
-    }
-    .o-abilities{
-background: red;
-    }
-    .o-abilities-inactive{
-        display: none;
-    }
-    .o-moves{
-background: blue;
-    }
-    .o-moves-inactive{
-        display: none;
-    }
+  }
+  .o-moves-inactive {
+    display: none;
+  }
+  .o-moves::-webkit-scrollbar {
+    width: 5px;
+    background: $mainColor;
+    border-radius: 16px;
+    
+  }
+  .o-moves::-webkit-scrollbar-thumb {
+    background: #ffcb05;
+    border-radius: 5px;
+  }
+  .o-abilities::-webkit-scrollbar {
+    width: 5px;
+    background: $mainColor;
+    border-radius: 16px;
+  }
+  .o-abilities::-webkit-scrollbar-thumb {
+    background: #ffcb05;
+    border-radius: 5px;
+  }
 }
-
