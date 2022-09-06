@@ -1,33 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import "./Search.scss";
 
+const Search = ({ getPokemons }) => {
+  const [search, setSearch] = useState("");
 
-
-const Search = ({getPokemons}) => {
-
-const [search,setSearch]= useState('');   
-
-const handleClick=(e)=>{
+  const handleClick = (e) => {
     e.preventDefault();
-   getPokemons(search)
-}
+    getPokemons(search);
+  };
 
   return (
     <div>
-        <form>
+      <form>
         <input
           type="text"
-          name="pokemoni"
-          placeholder="pokemn"
-          onChange={(e)=> setSearch(e.target.value)}
+          name="Pokemon"
+          placeholder="Search any Pokemon"
+          onChange={(e) => setSearch(e.target.value)}
         />
-
-    <p>{search}</p>
-        <button  onClick={handleClick}>Buscar</button>
+        <button onClick={handleClick}>Buscar</button>
       </form>
-        
-        
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

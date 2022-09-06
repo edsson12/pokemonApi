@@ -5,7 +5,7 @@ $secundario:#FFCB05;
 $letras:#FFCB05;
 $font-primary: 'Press Start 2P', cursive;
 $font-secundary: 'Abel', sans-serif;
-$width: 768px;
+$width: 425px;
 
 @mixin mobile {
     @media (max-width:#{$width}){

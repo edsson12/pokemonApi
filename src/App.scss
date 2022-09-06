@@ -1,0 +1,17 @@
+@import "./globals.scss";
+.App{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+flex-direction: column;
+
+p{
+    font-family: $font-primary;
+    color: $secundario;
+}
+h2{
+    color: #DF717A;
+}
+}
+

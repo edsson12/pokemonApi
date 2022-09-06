@@ -1,0 +1,37 @@
+@import "../../globals.scss";
+input{
+margin: 1rem 0.5rem;
+  padding: 1rem 3rem;
+  border: none;
+  transition: all ease 0.1s;
+  border-radius: 1rem;
+  background:$mainColor ;
+  color: $secundario;
+ 
+  
+}
+
+input::placeholder{
+    
+    color: $secundario;
+   
+    
+  }
+  input:focus{
+    outline: none;
+    border-bottom: 2px solid $secundario;
+   
+    
+  }
+
+  button{
+    padding: 1rem 3rem;
+    color: $mainColor;
+    border: none;
+    border-radius: 1rem;
+    background: $secundario;
+    &:hover{
+        background: $mainColor;
+        color: $secundario;
+    }
+  }
