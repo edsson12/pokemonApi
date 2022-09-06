@@ -1,4 +1,12 @@
 @import "../../globals.scss";
+form{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+@include mobile{
+    flex-direction: column;
+}
 input{
 margin: 1rem 0.5rem;
   padding: 1rem 3rem;
@@ -35,3 +43,5 @@ input::placeholder{
         color: $secundario;
     }
   }
+
+}

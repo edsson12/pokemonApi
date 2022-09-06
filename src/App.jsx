@@ -11,12 +11,19 @@ function App() {
   const [cargando, setCargando] = useState(false);
   const [error, setError]= useState(false);
 
+
   const getPokemons = async (query) => {
+    
     if(!query) return setError(true);
     setCargando(true);
     console.log(query);
     const response = await traerPokemon(query);
+    if (response.status==="404") {
+      console.log("sisa")
+      
+    }
     const result = await response.json();
+    
     console.log(result);
     setPokemon(result);
     setCargando(false);
@@ -24,8 +31,9 @@ function App() {
 
   return (
     <div className="App">
-      {error? <h2>Please make sure you´re searching for a Pokemon</h2>:null}
+      
       <Search {...{ getPokemons }} />
+      {error? <h2>Please make sure you´re searching for a Pokemon</h2>:null}
 
       {!cargando && pokemon ? <PokeCard nombre={pokemon.name} 
       sprites={pokemon.sprites.front_default} 
