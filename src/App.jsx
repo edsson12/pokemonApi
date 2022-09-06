@@ -4,6 +4,8 @@ import Search from "./components/Search/Search";
 import { traerPokemon } from "./services/getPokemon";
 
 function App() {
+
+  
   const [pokemon, setPokemon] = useState();
   const [cargando, setCargando] = useState(false);
 
@@ -26,6 +28,7 @@ function App() {
       abilities={pokemon.abilities}
       stats={pokemon.stats}
       moves={pokemon.moves}
+      type={pokemon.types}
       /> : null}
     </div>
   );
